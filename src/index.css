@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-navy-50 text-navy-900 antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white transition-all hover:bg-navy-800 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-emergency {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-emergency-600 px-4 py-2.5 text-sm font-semibold text-white transition-all hover:bg-emergency-700 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-safety {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-safety-600 px-4 py-2.5 text-sm font-semibold text-white transition-all hover:bg-safety-700 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-navy-700 ring-1 ring-inset ring-navy-200 transition-all hover:bg-navy-50 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .card {
+    @apply rounded-xl bg-white shadow-sm ring-1 ring-navy-100;
+  }
+  .input-field {
+    @apply w-full rounded-lg border-0 bg-white px-3.5 py-2.5 text-sm text-navy-900 ring-1 ring-inset ring-navy-200 transition-all placeholder:text-navy-400 focus:ring-2 focus:ring-inset focus:ring-navy-600;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #bcccdc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9fb3c8;
+}
